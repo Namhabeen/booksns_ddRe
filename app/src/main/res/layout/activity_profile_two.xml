@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/bookInfo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="200dp"
+        android:text="책 제목: 풀 받아져라 제발 블라블라 \n작가: 작가님님 \n읽은 날짜: 201110111"
+        app:layout_constraintStart_toEndOf="@+id/bookButton2"
+        app:layout_constraintTop_toBottomOf="@+id/imageHome2" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Yuna Kim"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <ImageView
+        android:id="@+id/tabBar"
+        tools:layout_editor_absoluteY="678dp"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/image_z1" />
+
+    <ImageButton
+        android:id="@+id/heartTab"
+        android:layout_width="48dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="7dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/image_z2" />
+
+    <ImageButton
+        android:id="@+id/searchTab"
+        android:layout_width="48dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="7dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homeTab"
+        app:srcCompat="@drawable/image_z4" />
+
+    <ImageButton
+        android:id="@+id/homeTab"
+        android:layout_width="48dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="7dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/heartTab"
+        app:srcCompat="@drawable/image_z3" />
+
+    <ImageButton
+        android:id="@+id/profileTab"
+        android:layout_width="48dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="7dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchTab"
+        app:srcCompat="@drawable/image_z5" />
+
+    <ImageView
+        android:id="@+id/imageHome2"
+        android:layout_width="411dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_e01" />
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="61dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageHome2"
+        app:srcCompat="@drawable/image_d02" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Yuna Kim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+    <TextView
+        android:id="@+id/readingLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:text="독서량: 5권\n독서시간: 2D 7H 20M"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/profileImage"
+        app:layout_constraintTop_toTopOf="@+id/imageHome2" />
+
+    <TextView
+        android:id="@+id/imageHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="history"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageHome2" />
+
+    <ImageButton
+        android:id="@+id/bookButton1"
+        android:layout_width="103dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageHome2"
+        app:srcCompat="@drawable/image_e02" />
+
+    <ImageView
+        android:id="@+id/bookPhoto1"
+        android:layout_width="128dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/bookButton1"
+        app:layout_constraintTop_toBottomOf="@+id/bookInfo1"
+        app:srcCompat="@drawable/image_e03" />
+
+    <ImageButton
+        android:id="@+id/bookButton2"
+        android:layout_width="103dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="200dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageHome2"
+        app:srcCompat="@drawable/image_e04" />
+
+    <ImageView
+        android:id="@+id/bookPhoto2"
+        android:layout_width="128dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/bookButton2"
+        app:layout_constraintTop_toBottomOf="@+id/bookInfo2"
+        app:srcCompat="@drawable/image_e05" />
+
+    <TextView
+        android:id="@+id/bookInfo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:text="책 제목: 이어쩌고 저쩌고 블라블라 \n작가: 작가님님 \n읽은 날짜: 201110111"
+        app:layout_constraintStart_toEndOf="@+id/bookButton1"
+        app:layout_constraintTop_toBottomOf="@+id/imageHome2" />
+
+    <TextView
+        android:id="@+id/bookReview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="44dp"
+        android:text="재미있었음! 추천추천! \n(게시글 내용 세줄) \n블라브랄ㄹ라"
+        app:layout_constraintStart_toEndOf="@+id/bookPhoto1"
+        app:layout_constraintTop_toBottomOf="@+id/bookInfo1" />
+
+    <TextView
+        android:id="@+id/bookReview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="44dp"
+        android:text="재미있었음! 추천추천! \n(게시글 내용 세줄) \n블라브랄ㄹ라"
+        app:layout_constraintStart_toEndOf="@+id/bookPhoto2"
+        app:layout_constraintTop_toBottomOf="@+id/bookInfo2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

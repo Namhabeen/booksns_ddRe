@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "917723774487",
+    "firebase_url": "https://booksns-re.firebaseio.com",
+    "project_id": "booksns-re",
+    "storage_bucket": "booksns-re.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917723774487:android:d858b1054c954526d8a652",
+        "android_client_info": {
+          "package_name": "com.example.booksns_re"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917723774487-dn7i1bi6dsm83jdbdu32va7v7p0897f2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3jpLoB8iqA_EiHaNG_g-5W4h1SYDq7TA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917723774487-dn7i1bi6dsm83jdbdu32va7v7p0897f2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
