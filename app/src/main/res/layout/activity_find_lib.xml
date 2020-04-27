@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="680dp"
+        android:layout_marginTop="1dp"
+        android:background="#1A000000"
+        app:layout_constraintBottom_toTopOf="@+id/tabBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="380dp"
+        android:layout_height="560dp"
+        android:background="@drawable/activity_find_lib_bg"
+        app:layout_constraintBottom_toTopOf="@+id/tabBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="#CDCACA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="380dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="130dp"
+        android:background="#CDCACA"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <TextView
+        android:id="@+id/mapBookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="|작은 아씨들|"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <ImageView
+        android:id="@+id/tabBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/image_z1"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        tools:layout_editor_absoluteX="-37dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <ImageButton
+        android:id="@+id/heartTab"
+        android:layout_width="48dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="7dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/image_z2" />
+
+    <ImageButton
+        android:id="@+id/homeTab"
+        android:layout_width="48dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="7dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/heartTab"
+        app:srcCompat="@drawable/image_z3" />
+
+    <ImageButton
+        android:id="@+id/searchTab"
+        android:layout_width="48dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="7dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profileTab"
+        app:layout_constraintStart_toEndOf="@+id/homeTab"
+        app:srcCompat="@drawable/image_z4" />
+
+    <ImageButton
+        android:id="@+id/profileTab"
+        android:layout_width="48dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="7dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/image_z5" />
+
+    <ImageButton
+        android:id="@+id/tabDown"
+        android:layout_width="90dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="550dp"
+        android:tint="#ACA8A8"
+        app:layout_constraintBottom_toTopOf="@+id/homeTab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/button_onoff_indicator_off" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginBottom="1025dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tabBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginRight="127dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinner1"
+        app:layout_constraintTop_toBottomOf="@+id/tabDown" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="620dp"
+        android:layout_marginRight="620dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/tabDown" />
+
+    <TextView
+        android:id="@+id/libName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="관교 도서관"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    <TextView
+        android:id="@+id/libDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:text="470m"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/libName" />
+
+    <TextView
+        android:id="@+id/libLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="7dp"
+        android:text="인천광역시 미추홀구"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/libDistance"
+        app:layout_constraintTop_toBottomOf="@+id/libName" />
+
+    <ImageView
+        android:id="@+id/libPhoto"
+        android:layout_width="106dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/line2"
+        app:srcCompat="@drawable/image_j01" />
+
+    <TextView
+        android:id="@+id/libCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:text="책 재고 수: 2"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/libDistance" />
+
+    <Button
+        android:id="@+id/libWayButton"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/activity_find_lib_bt01"
+        android:text="길찾기"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/libCount" />
+
+    <Button
+        android:id="@+id/libCallButton"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/activity_find_lib_bt01"
+        android:text="전화"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/libWayButton"
+        app:layout_constraintTop_toBottomOf="@+id/libCount" />
+
+    <Button
+        android:id="@+id/libBookButton"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/activity_search_result_bt01"
+        android:text="예약신청"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/libCallButton"
+        app:layout_constraintTop_toBottomOf="@+id/libCount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
