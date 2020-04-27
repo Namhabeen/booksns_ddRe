@@ -85,6 +85,7 @@ public class SignUpTwoActivity extends AppCompatActivity{
 
     public static void showToast(Activity activity, String msg) {
         Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
     }
 }
 
