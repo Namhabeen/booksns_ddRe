@@ -65,6 +65,7 @@ public class SignUpTwoActivity extends AppCompatActivity{
                                 } else {
                                     if(task.getException() != null){
                                         showToast(SignUpTwoActivity.this, "흠 무언가 단단히 잘못되었습니다! 개발자에게 문의하세요!");
+                                        Log.w("error",task.getException());
                                     }
                                 }
                             }
