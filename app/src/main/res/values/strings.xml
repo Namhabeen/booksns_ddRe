@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">booksns_Re</string>
+    <string name="facebook_application_id" translatable="false">
+        538558316848066</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">
+        f5b631af50f84e88afdc70d916d977ba</string>
 </resources>
