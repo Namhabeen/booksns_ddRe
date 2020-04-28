@@ -46,26 +46,24 @@ public class SignUpTwoActivity extends AppCompatActivity{
     };
 
     private void signUp() {
-        String id = ((EditText)findViewById(R.id.idInput2)).getText().toString();
+        String email = ((EditText)findViewById(R.id.idInput2)).getText().toString();
         String password = ((EditText)findViewById(R.id.editText12)).getText().toString();
         String passwordCheck = ((EditText)findViewById(R.id.checkPwInput)).getText().toString();
         String name = ((EditText)findViewById(R.id.nameInput)).getText().toString();
         String birth =((EditText)findViewById(R.id.birthInput)).getText().toString();
 
-        if(id.length() > 0 && password.length() > 0 && passwordCheck.length() > 0 && name.length()>0 && birth.length()>0){
+        if(email.length() > 0 && password.length() > 0 && passwordCheck.length() > 0 && name.length()>0 && birth.length()>0){
             if(password.equals(passwordCheck)){
-                mAuth.createUserWithEmailAndPassword(id, password)
+                mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     FirebaseUser user = mAuth.getCurrentUser();
-                                    showToast(SignUpTwoActivity.this, "회원가입에 성공하셨습니다:)");
-                                    myStartActivity(MainActivity.class);
+                                    myStartActivity(SignUpThreeActivity.class);
                                 } else {
                                     if(task.getException() != null){
-                                        showToast(SignUpTwoActivity.this, "흠 무언가 단단히 잘못되었습니다! 개발자에게 문의하세요!");
-                                        Log.w("error",task.getException());
+                                        showToast(SignUpTwoActivity.this, "이메일 주소와 비밀번호(6자리 이상)을 확인해주세요!");
                                     }
                                 }
                             }
@@ -86,7 +84,5 @@ public class SignUpTwoActivity extends AppCompatActivity{
 
     public static void showToast(Activity activity, String msg) {
         Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show();
-        //Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
     }
 }
-

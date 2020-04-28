@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
@@ -25,9 +27,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
         android:ems="10"
-        android:hint="아이디"
+        android:hint="이메일"
         android:fontFamily="@font/arita"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageBookSns" />
@@ -60,20 +62,6 @@
         app:layout_constraintStart_toStartOf="@+id/pwInput"
         app:layout_constraintTop_toBottomOf="@+id/pwInput" />
 
-    <TextView
-        android:id="@+id/forgotGo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:fontFamily="@font/arita"
-        android:text="패스워드를 잊으셨나요?"
-        android:textColor="#151515"
-        app:layout_constraintBottom_toTopOf="@+id/signUpFb"
-        app:layout_constraintEnd_toStartOf="@+id/signUpGo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.96" />
-
     <Button
         android:id="@+id/signUpFb"
         android:layout_width="330dp"
@@ -90,6 +78,29 @@
         app:layout_constraintStart_toStartOf="@+id/pwInput"
         app:layout_constraintTop_toBottomOf="@+id/pwInput" />
 
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/forgotGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/arita"
+        android:text="패스워드를 잊으셨나요?"
+        android:textColor="#151515"
+        app:layout_constraintBottom_toTopOf="@+id/signUpFb"
+        app:layout_constraintEnd_toStartOf="@+id/signUpGo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton"
+        app:layout_constraintVertical_bias="0.746" />
+
     <TextView
         android:id="@+id/signUpGo"
         android:layout_width="wrap_content"
@@ -103,10 +114,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/forgotGo"
         app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.967" />
-
-    <GridView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        app:layout_constraintVertical_bias="0.76" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

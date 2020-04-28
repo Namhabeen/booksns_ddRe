@@ -18,7 +18,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpThreeActivity"/>
-        <activity android:name=".SignUpOneActivity"/>
         <activity android:name=".SignUpTwoActivity"/>
     </application>
 
