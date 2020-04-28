@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.forgotGo:
-                    showToast(MainActivity.this, "비밀번호 찾기 창으로 이동합니다. (개발중)");
-                    myStartActivity(SignUpTwoActivity.class);
+                    showToast(MainActivity.this, "비밀번호 찾기 창으로 이동합니다.");
+                    myStartActivity(FindActivity.class);
                     break;
 
                 case R.id.signUpGo:

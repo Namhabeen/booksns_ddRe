@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textfind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/arita"
+        android:text="비밀번호 찾기"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/arita"
+        android:inputType="textEmailAddress"
+        android:text="이메일"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/mail"
+        app:layout_constraintTop_toBottomOf="@+id/textfind" />
+
+    <EditText
+        android:id="@+id/mail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:fontFamily="@font/arita"
+        android:hint="이메일을 입력해주세요"
+        android:inputType="textPersonName"
+        android:textColor="#201F1F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textmail" />
+
+    <Button
+        android:id="@+id/gotologin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/activity_search_result_bt02"
+        android:fontFamily="@font/arita"
+        android:text="로그인으로 돌아가기"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/findpw"
+        app:layout_constraintStart_toStartOf="@+id/findpw"
+        app:layout_constraintTop_toBottomOf="@+id/findpw" />
+
+    <Button
+        android:id="@+id/findpw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/activity_search_result_bt02"
+        android:fontFamily="@font/arita"
+        android:text="비밀번호 찾기"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mail"
+        app:layout_constraintTop_toBottomOf="@+id/mail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
