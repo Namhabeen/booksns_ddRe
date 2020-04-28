@@ -31,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.signUpGo).setOnClickListener(onClickListener);
     }
 
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
+    }
+
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -71,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
                             } else {
                                 if (task.getException() != null) {
                                     showToast(MainActivity.this, "아이디 또는 비밀번호를 확인해주세요");
-                                    showToast(MainActivity.this, task.getException().toString());
                                 }
                             }
                         }
