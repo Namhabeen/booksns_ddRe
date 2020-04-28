@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.signUpGo:
                     showToast(MainActivity.this, "회원가입 창으로 이동합니다!");
-                    myStartActivity(SignUpOneActivity.class);
+                    myStartActivity(SignUpTwoActivity.class);
                     break;
 
             }
