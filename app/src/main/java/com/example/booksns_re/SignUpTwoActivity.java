@@ -21,15 +21,19 @@ import android.app.Activity;
 import android.widget.Toast;
 
 public class SignUpTwoActivity extends AppCompatActivity{
+
     private FirebaseAuth mAuth;
+    private String email;
+    private String password;
+    private String passwordCheck;
+    private String name;
+    private String birth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_two);
-
         mAuth = FirebaseAuth.getInstance();
-
         findViewById(R.id.nextButton2).setOnClickListener(onClickListener);
     }
 
@@ -45,12 +49,12 @@ public class SignUpTwoActivity extends AppCompatActivity{
         }
     };
 
-    private void signUp() {
-        String email = ((EditText)findViewById(R.id.idInput2)).getText().toString();
-        String password = ((EditText)findViewById(R.id.editText12)).getText().toString();
-        String passwordCheck = ((EditText)findViewById(R.id.checkPwInput)).getText().toString();
-        String name = ((EditText)findViewById(R.id.nameInput)).getText().toString();
-        String birth =((EditText)findViewById(R.id.birthInput)).getText().toString();
+    public void signUp() {
+        email = ((EditText)findViewById(R.id.idInput2)).getText().toString();
+        password = ((EditText)findViewById(R.id.editText12)).getText().toString();
+        passwordCheck = ((EditText)findViewById(R.id.checkPwInput)).getText().toString();
+        name = ((EditText)findViewById(R.id.nameInput)).getText().toString();
+        birth =((EditText)findViewById(R.id.birthInput)).getText().toString();
 
         if(email.length() > 0 && password.length() > 0 && passwordCheck.length() > 0 && name.length()>0 && birth.length()>0){
             if(password.equals(passwordCheck)){
@@ -68,13 +72,16 @@ public class SignUpTwoActivity extends AppCompatActivity{
                                 }
                             }
                         });
-            }else{
+            }
+            else{
                 showToast(SignUpTwoActivity.this, "비밀번호가 일치하지 않아요. 확인해주세요!");
             }
         }else{
             showToast(SignUpTwoActivity.this, "빈 칸이 발견되었습니다. 다 채우셨나요?");
         }
     }
+
+
 
     private void myStartActivity(Class c) {
         Intent intent = new Intent(this, c);
