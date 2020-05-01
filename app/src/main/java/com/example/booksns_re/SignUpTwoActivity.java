@@ -35,6 +35,7 @@ public class SignUpTwoActivity extends AppCompatActivity {
     private String passwordCheck;
     private String name;
     private String birth;
+    private String userId;
 
     private DatabaseReference mDatabase;// ...
 
@@ -62,6 +63,7 @@ public class SignUpTwoActivity extends AppCompatActivity {
     };
 
     private void signUp() {
+        userId = ((EditText) findViewById(R.id.nameInput)).getText().toString();
         email = ((EditText) findViewById(R.id.idInput2)).getText().toString();
         password = ((EditText) findViewById(R.id.editText12)).getText().toString();
         passwordCheck = ((EditText) findViewById(R.id.checkPwInput)).getText().toString();
@@ -81,9 +83,10 @@ public class SignUpTwoActivity extends AppCompatActivity {
                                     result.put("password", password);
                                     result.put("name",name);
                                     result.put("birth",birth);
-                                    writeNewUser("1", email, password, name, birth);
+                                    writeNewUser(userId, email, password, name, birth);
 
                                     myStartActivity(SignUpThreeActivity.class);
+                                    finish();
                                 } else {
                                     if (task.getException() != null) {
                                         showToast(SignUpTwoActivity.this, "이메일 주소와 비밀번호(6자리 이상)을 확인해주세요!");
@@ -117,14 +120,14 @@ public class SignUpTwoActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         // Write was successful!
-                        Toast.makeText(SignUpTwoActivity.this, "저장을 완료했습니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignUpTwoActivity.this, "회원가입 되었습니다.", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         // Write failed
-                        Toast.makeText(SignUpTwoActivity.this, "저장을 실패했습니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignUpTwoActivity.this, "회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show();
                     }
                 });
 

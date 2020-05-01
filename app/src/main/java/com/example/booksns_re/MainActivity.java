@@ -50,11 +50,13 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.forgotGo:
                     showToast(MainActivity.this, "비밀번호 찾기 창으로 이동합니다.");
                     myStartActivity(FindActivity.class);
+                    finish();
                     break;
 
                 case R.id.signUpGo:
                     showToast(MainActivity.this, "회원가입 창으로 이동합니다!");
                     myStartActivity(SignUpTwoActivity.class);
+                    finish();
                     break;
 
             }
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 showToast(MainActivity.this, "로그인에 성공하였습니다.");
                                 myStartActivity(SignUpThreeActivity.class);
+                                finish();
                             } else {
                                 if (task.getException() != null) {
                                     showToast(MainActivity.this, "아이디 또는 비밀번호를 확인해주세요");
