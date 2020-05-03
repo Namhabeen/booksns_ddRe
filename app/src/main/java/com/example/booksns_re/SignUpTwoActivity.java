@@ -36,11 +36,12 @@ public class SignUpTwoActivity extends AppCompatActivity {
     private String name;
     private String birth;
     private String userId;
-
+    Intent intent = new Intent(getApplicationContext(), PostActivity.class);
     private DatabaseReference mDatabase;// ...
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_two);
 
@@ -63,6 +64,8 @@ public class SignUpTwoActivity extends AppCompatActivity {
     };
 
     private void signUp() {
+
+
         userId = ((EditText) findViewById(R.id.nameInput)).getText().toString();
         email = ((EditText) findViewById(R.id.idInput2)).getText().toString();
         password = ((EditText) findViewById(R.id.editText12)).getText().toString();
@@ -85,6 +88,7 @@ public class SignUpTwoActivity extends AppCompatActivity {
                                     result.put("birth",birth);
                                     writeNewUser(userId, email, password, name, birth);
 
+                                    intent.putExtra("name",name); /*송신*/
                                     myStartActivity(SignUpThreeActivity.class);
                                     finish();
                                 } else {
@@ -114,7 +118,6 @@ public class SignUpTwoActivity extends AppCompatActivity {
 
     private void writeNewUser(String userId, String email, String password,String name,String birth) {
         Users user = new Users(email, password,name,birth);
-
         mDatabase.child("users").child(userId).setValue(user)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
