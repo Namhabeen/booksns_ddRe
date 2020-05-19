@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    android:inputType="textNoSuggstions"
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="361dp"
+        android:layout_height="376dp"
+        android:layout_marginTop="52dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_d01" />
 
     <ImageView
         android:id="@+id/tabBar"
@@ -16,10 +27,10 @@
 
     <ImageButton
         android:id="@+id/heartTab"
-        android:layout_width="48dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="6dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,10 +39,9 @@
 
     <ImageButton
         android:id="@+id/homeTab"
-        android:layout_width="48dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="6dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,39 +50,26 @@
 
     <ImageButton
         android:id="@+id/searchTab"
-        android:layout_width="48dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="6dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/profileTab"
-        app:layout_constraintStart_toEndOf="@+id/homeTab"
         app:srcCompat="@drawable/image_z4" />
 
     <ImageButton
         android:id="@+id/profileTab"
-        android:layout_width="48dp"
-        android:layout_height="38dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="6dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/image_z5" />
-
-    <ImageView
-        android:id="@+id/imageHome"
-        android:layout_width="363dp"
-        android:layout_height="331dp"
-        android:layout_marginTop="60dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/image_d01" />
 
     <TextView
         android:id="@+id/userName"
@@ -90,35 +87,36 @@
 
     <ImageButton
         android:id="@+id/bookReading"
-        android:layout_width="194dp"
-        android:layout_height="258dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="193dp"
+        android:layout_height="272dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:background="#FFFFFF"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="@+id/imageHome"
-        app:layout_constraintTop_toTopOf="@+id/imageHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
         app:srcCompat="@drawable/image_d03" />
 
     <TextView
         android:id="@+id/timeReading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
         android:fontFamily="@font/arita"
         android:text="3h 20m 70%"
         android:textColor="#151515"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageHome"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookReading" />
 
     <TextView
         android:id="@+id/profilePost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/arita"
         android:text="    1\n게시물"
         android:textColor="#151515"
@@ -131,10 +129,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/arita"
         android:text="    5\n팔로우"
         android:textColor="#151515"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profilePost" />
 
@@ -143,10 +142,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/arita"
         android:text="    7\n팔로잉"
         android:textColor="#151515"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileFollow" />
 
@@ -157,41 +157,102 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageHome"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
         app:srcCompat="@drawable/image_d02" />
 
     <TextView
         android:id="@+id/profileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/arita"
-        android:text="Yuna Kim"
+        android:text="Yuna"
         android:textColor="#151515"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/profileImage"
+        app:layout_constraintStart_toStartOf="@+id/profileImage"
         app:layout_constraintTop_toBottomOf="@+id/profileImage" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="329dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="20dp"
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="35dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitXY"
+        android:tint="#FFF5B7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageHome"
-        app:srcCompat="@drawable/image_d04" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/image_d12" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="기록"
+        android:fontFamily="@font/arita"
+        android:textColor="#151515"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton4"
+        app:layout_constraintStart_toStartOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
     <ImageButton
-        android:id="@+id/markButton"
-        android:layout_width="190dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="10dp"
+        android:id="@+id/TimerButton"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
         android:background="#FFFFFF"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitXY"
+        android:tint="#FFF5B7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        app:srcCompat="@drawable/image_d05" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/image_d10" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="북타이머"
+        android:fontFamily="@font/arita"
+        android:textColor="#151515"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/TimerButton"
+        app:layout_constraintStart_toStartOf="@+id/TimerButton"
+        app:layout_constraintTop_toBottomOf="@+id/TimerButton" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitXY"
+        android:tint="#FFF5B7"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintStart_toEndOf="@+id/TimerButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/image_d11" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="프로필편집"
+        android:fontFamily="@font/arita"
+        android:textColor="#151515"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton3"
+        app:layout_constraintStart_toStartOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
