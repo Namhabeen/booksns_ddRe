@@ -69,8 +69,6 @@ public class FindActivity extends AppCompatActivity {
     private void find() {
         String email = ((EditText) findViewById(R.id.mail)).getText().toString();
 
-        showToast(FindActivity.this, "위에 입력하신 이메일함을 확인해주세요!");
-
         if (email.length() > 0) {
             mAuth.sendPasswordResetEmail(email)
                     .addOnCompleteListener(this, new OnCompleteListener<Void>() {
@@ -78,7 +76,7 @@ public class FindActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                showToast(FindActivity.this, "이메일함을 열어보세요!");
+                                showToast(FindActivity.this, "위에 입력하신 이메일함을 열어보세요!");
                             }
                             else{
                                 showToast(FindActivity.this,"에러가 발생했어요! 재시도하거나 개발자에게 연락하세요.");

@@ -134,7 +134,7 @@ public class PostActivity extends AppCompatActivity {
         result.put("책 제목", bookName);
         result.put("카테고리", category);
         result.put("글", text);
-        writeNewPost(time, bookName, category, text);
+        //writeNewPost(time, bookName, category, text);
         //파이어베이스에 값 넘겨주고
         //카테고리:bookCategory, 게시글:text, 책제목: bookName, 현재시간: time
         //현재창 finish해서 종료시키기
@@ -153,25 +153,5 @@ public class PostActivity extends AppCompatActivity {
         Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show();
     }
 
-    private void writeNewPost(String time, String bookName, String category, String text) {
-        Post post = new Post(time, bookName, category, text);
 
-        mDatabase.child("post").child(bookName).setValue(post)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        // Write was successful!
-                        Toast.makeText(PostActivity.this, "업로드를 성공했습니다.", Toast.LENGTH_SHORT).show();
-                        myStartActivity(MainActivity.class);
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        // Write failed
-                        Toast.makeText(PostActivity.this, "업로드에 실패했습니다.", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-    }
 }
