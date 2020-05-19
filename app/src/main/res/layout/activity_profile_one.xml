@@ -175,7 +175,7 @@
         app:layout_constraintTop_toBottomOf="@+id/profileImage" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/calButton"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginTop="15dp"
@@ -197,9 +197,9 @@
         android:textColor="#151515"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton4"
-        app:layout_constraintStart_toStartOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+        app:layout_constraintEnd_toEndOf="@+id/calButton"
+        app:layout_constraintStart_toStartOf="@+id/calButton"
+        app:layout_constraintTop_toBottomOf="@+id/calButton" />
 
     <ImageButton
         android:id="@+id/TimerButton"
@@ -229,14 +229,14 @@
         app:layout_constraintTop_toBottomOf="@+id/TimerButton" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/profileEdit"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginTop="15dp"
         android:background="#FFFFFF"
         android:scaleType="fitXY"
         android:tint="#FFF5B7"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintEnd_toStartOf="@+id/calButton"
         app:layout_constraintStart_toEndOf="@+id/TimerButton"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/image_d11" />
@@ -251,8 +251,8 @@
         android:textColor="#151515"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton3"
-        app:layout_constraintStart_toStartOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+        app:layout_constraintEnd_toEndOf="@+id/profileEdit"
+        app:layout_constraintStart_toStartOf="@+id/profileEdit"
+        app:layout_constraintTop_toBottomOf="@+id/profileEdit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

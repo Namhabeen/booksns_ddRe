@@ -33,6 +33,14 @@ public class ProfileOneActivity extends AppCompatActivity {
                     showToast(ProfileOneActivity.this, "북타이머를 실행합니다.");
                     myStartActivity(TimerActivity.class);
                     break;
+                case R.id.profileEdit:
+                    showToast(ProfileOneActivity.this,"프로필편집을 실행합니다.");
+                    myStartActivity(EditProfileActivity.class);
+                    break;
+                case R.id.calButton:
+                    showToast(ProfileOneActivity.this,"기록을 실행합니다.");
+                    myStartActivity(HistoryActivity.class);
+                    break;
             }
         }
     };
