@@ -120,7 +120,7 @@ public class SignUpThreeActivity extends AppCompatActivity {
       if(sub<=0){
           Toast.makeText(getApplicationContext(), "관심목록추가: "+temp+"개, 등록되었습니다!", Toast.LENGTH_SHORT).show();
           temp=0;
-          myStartActivity(MainActivity.class);
+          myStartActivity(HomeActivity.class);
           finish();
       }
       else{

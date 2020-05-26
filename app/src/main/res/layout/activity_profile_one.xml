@@ -7,6 +7,17 @@
     android:background="#FFFFFF">
     android:inputType="textNoSuggstions"
 
+    <ImageButton
+        android:id="@+id/backButton2"
+        android:layout_width="27dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="361dp"

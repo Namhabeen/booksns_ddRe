@@ -78,8 +78,9 @@
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/arita"
-        android:text="패스워드를 잊으셨나요?"
         android:textColor="#151515"
+        android:text="패스워드를 잊으셨나요?"
+
         app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toStartOf="@+id/signUpGo"
         app:layout_constraintStart_toStartOf="parent" />

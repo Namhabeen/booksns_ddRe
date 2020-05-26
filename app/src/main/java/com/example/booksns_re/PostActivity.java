@@ -69,7 +69,7 @@ public class PostActivity extends AppCompatActivity {
             switch (v.getId()) {
                 case R.id.backButton:
                     Log.e("작성취소", "클릭");
-                    myStartActivity(MainActivity.class);
+                    myStartActivity(HomeActivity.class);
                     finish();
                     break;
                 case R.id.saveButton:

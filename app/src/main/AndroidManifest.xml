@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,9 +24,16 @@
 </activity>
 <activity android:name=".PostActivity"/>
 <activity android:name=".SignUpTwoActivity"/>
-<activity android:name=".MainActivity"/>
+<activity android:name=".SearchActivity"/>
+<activity android:name=".ProfileOneActivity"/>
 <activity android:name=".TimerActivity"/>
 <activity android:name=".FindActivity"/>
+<activity android:name=".HomeActivity"/>
+<activity android:name=".Post"/>
+<activity android:name=".HistoryActivity"/>
+<activity android:name=".EditProfileActivity"/>
+<activity android:name=".SearchResultActivity"/>
+<activity android:name=".Users"/>
 <activity android:name=".SignUpThreeActivity"/>
     </application>
 
