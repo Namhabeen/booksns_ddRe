@@ -1,7 +1,12 @@
 package com.example.booksns_re;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Application;
+import android.content.Context;
+import android.icu.text.Bidi;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,12 +41,13 @@ public class SignUpTwoActivity extends AppCompatActivity {
     private String name;
     private String birth;
     private String userId;
-    Intent intent = new Intent(getApplicationContext(), PostActivity.class);
+    Intent intent;
     private DatabaseReference mDatabase;// ...
+    private Bidi AppContextProvider;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_two);
 
